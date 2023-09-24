@@ -1,0 +1,99 @@
+@font-face {
+    font-family: "DigitalStrip";
+    font-style: normal;
+    font-weight: 400;
+    src: url("../fonts/v_MightyZeo2.0_v1.07.ttf");
+}
+
+body {
+    font-family: 'DigitalStrip';
+}
+
+.surerheros-container {
+    margin: 20px auto;
+    width: 75vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+}
+article {
+    border: 1px solid rgb(0, 0, 0);
+    outline: 1px solid white;
+    box-shadow: 0px 0px 0px 2px rgb(0, 0, 0);
+    border-radius: 30px 0 20px 0;
+    padding: 10px 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+article h2 {
+    margin: 10px 0px;
+}
+.superhero-biography {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 1px 0px;
+    text-align: left;
+}
+.superhero-biography p {
+    margin: 0;
+    font-size: 1.3rem;
+    line-height: 1.4rem;
+}
+.superhero-biography p:first-child{
+    font-weight: bold;
+    margin-right: 5px;
+    text-wrap: nowrap;
+}
+img {
+    width: 95%;
+    border-radius: 15px;
+    margin: 10px;
+}
+
+
+/* рейтинг */
+form[id^="rating-area"] {
+	overflow: hidden;
+	width: 265px;
+	margin: 0 auto;
+}
+form[id^="rating-area"]:not(:checked) > input {
+	display: none;
+}
+form[id^="rating-area"]:not(:checked) > label {
+	float: right;
+	width: 42px;
+	padding: 0;
+	cursor: pointer;
+	font-size: 38px;
+	line-height: 38px;
+	color: lightgrey;
+	text-shadow: 1px 1px #bbb;
+}
+form[id^="rating-area"]:not(:checked) > label:before {
+	content: '★';
+}
+form[id^="rating-area"] > input:checked ~ label {
+	color: gold;
+	text-shadow: 1px 1px #c60;
+}
+form[id^="rating-area"]:not(:checked) > label:hover,
+form[id^="rating-area"]:not(:checked) > label:hover ~ label {
+	color: rgb(224, 191, 0);
+    text-shadow: 1px 1px rgb(93, 75, 32);
+}
+form[id^="rating-area"] > input:checked + label:hover,
+form[id^="rating-area"] > input:checked + label:hover ~ label,
+form[id^="rating-area"] > input:checked ~ label:hover,
+form[id^="rating-area"] > input:checked ~ label:hover ~ label,
+form[id^="rating-area"] > label:hover ~ input:checked ~ label {
+	color: rgb(224, 191, 0);
+	text-shadow: 1px 1px rgb(93, 75, 32);
+}
+form[id^="rating-area"] > label:active {
+	position: relative;
+}
+

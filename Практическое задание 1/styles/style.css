@@ -1,0 +1,111 @@
+body {
+    display: flex;
+    font-family: 'Lucida Sans', Verdana, sans-serif;
+}
+.container {
+    margin: auto;
+    width: 67vw;
+}
+h2 {
+    color: rgb(38, 38, 38);
+    font-size: 1.81rem;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    margin-bottom: 2rem;
+}
+form {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 3rem;
+}
+.task-input {
+    padding: 2rem 2rem;
+    width: 54%;
+    font-size: 1.2rem;
+    border-radius: 3%;
+    border: 2px solid gray;
+}
+input:focus {
+    outline: none;
+    border: 1px solid rgb(162, 165, 235);
+}
+button {
+    margin-right: 2rem;
+    padding: 2rem 0rem;
+    width: 21vw;
+    font-size: 1.2rem;
+    background-color: rgb(192, 194, 235);
+    border: none;
+    border-radius: 2%;
+}
+.task-container {
+    margin: 2rem 0rem;
+}
+.no-task {
+    margin-bottom: 4rem;
+    font-size: 1.7rem;
+    font-weight: 400;
+    text-align: center;
+    color: gray;
+}
+.clear-task {
+    float: right;
+}
+.task-div {
+    margin-right: 2rem;
+    border: 1.5px solid gray;
+    padding: 1rem;
+    font-size: 1.2rem;
+    border-bottom: none;
+    border-radius: 2%;
+}
+.task-div:last-child {
+    border-bottom:  1.5px solid gray;
+}
+
+input[type="checkbox"] {
+    display: none;
+}
+
+label {
+    display: flex;
+    justify-content: space-between;
+}
+label span{
+    max-width: 90%;
+}
+label::after {
+    margin: auto 1rem auto 2rem;
+    content: "";
+    width: 25px;
+    height: 25px;
+    border: 1px solid gray;
+}
+input:checked + label{
+    text-decoration: line-through;
+}
+input:checked + label::after {
+    animation-name: checkbox-appear;
+    animation-duration: 1.2s;
+    background-image: url(../assets/Check.png);
+    border: none;
+}
+input:hover + label::after {
+    background-color:rgba(192, 194, 235, 0.386);
+}
+.error-div {
+    color: rgb(166, 34, 142);
+    font-size: 1.3rem;
+}
+@keyframes checkbox-appear {
+    from {
+        opacity: 0%;
+    }
+    to {
+        opacity: 100%;
+    }
+}
+
+
+

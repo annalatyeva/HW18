@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0" />
+		<link
+			rel="stylesheet"
+			href="styles/normalize.css" />
+		<link
+			rel="stylesheet"
+			href="styles/style.css" />
+		<title>Планировщик задач</title>
+	</head>
+	<body>
+		<div class="container">
+			<h1>Планировщик задач</h1>
+			<h2>Добавить задачу</h2>
+			<form action="">
+				<input
+					class="task-input"
+					type="text"
+					placeholder="Задача" />
+				<button
+					class="add-task"
+					type="button">
+					Добавить
+				</button>
+			</form>
+			<h2>Список задач</h2>
+			<div>
+				<div class="task-container"></div>
+				<h3 class="no-task">Нет задач</h3>
+				<button
+					class="clear-task"
+					type="button"
+					disabled>
+					Очистить список задач
+				</button>
+			</div>
+		</div>
+		<script src="script.js"></script>
+	</body>
+</html>
